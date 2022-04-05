@@ -5,10 +5,11 @@ public class DictBinTree implements Dict{
     private BinNode root;
 
     public DictBinTree(){
-        BinNode root = null;
+        this.root = null;
     }
 
     public void insert(int k){
+        BinNode z = new BinNode(k);
         BinNode y = null;
         BinNode x = this.root;
         while(x != null){
@@ -23,12 +24,16 @@ public class DictBinTree implements Dict{
             this.root = new BinNode(k);
         }
         else if(k < y.getData())
-        y.setLeftChild(new BinNode(k));
-        else y.setRightChild(new BinNode(k));
+        y.setLeftChild(z);
+        else y.setRightChild(z);
     }
 
     public boolean search(int k){
-        BinNode x = this.root;
+        return treeSearch(this.root, k);
+        
+    }
+
+    private boolean treeSearch(BinNode x, int k){
         Boolean result = false;
         while(k != x.getData() || x == null){
             if(x == null)
@@ -42,5 +47,19 @@ public class DictBinTree implements Dict{
         return result; 
     }
 
-    public ArrayList<Integer> orderedTraversal(){}
+    public ArrayList<Integer> orderedTraversal(){
+        ArrayList<Integer> liste = new ArrayList<Integer>();
+        BinNode x = this.root;
+        return inorderTreeWalk(x, liste);
+
+    }
+
+    private ArrayList<Integer> inorderTreeWalk(BinNode x, ArrayList<Integer> liste){
+        if(x != null){
+            x = x.getLeftChild();
+            liste.add(Integer.valueOf(x.getData()));
+            x = x.getRightChild();
+        }
+        return liste;
+    }
 }
