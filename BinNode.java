@@ -1,10 +1,10 @@
-public class BinNode
+public class BinNode{
 
     private int data;
-    private Node rightChild;
-    private Node leftChild;
+    private BinNode rightChild;
+    private BinNode leftChild;
 
-    public Node(int data){
+    public BinNode(int data){
         this.data = data;
         this.rightChild = null;
         this.leftChild = null;
@@ -14,18 +14,19 @@ public class BinNode
         return this.data;
     }
 
-    public Node getRightChild(){
+    public BinNode getRightChild(){
         return this.rightChild;
     }
 
-    public Node getLeftChild(){
+    public BinNode getLeftChild(){
         return this.leftChild;
     }
 
-    public void setRightChild(Node node){
+    public void setRightChild(BinNode node){
         this.rightChild = node;
     }
 
-    public void setLeftChild(Node node){
+    public void setLeftChild(BinNode node){
         this.leftChild = node;
     }
+}
