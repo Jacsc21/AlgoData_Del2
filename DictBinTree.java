@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class DictBinTree implements Dict{
     
     private BinNode root;
@@ -39,4 +41,6 @@ public class DictBinTree implements Dict{
         }
         return result; 
     }
+
+    public ArrayList<Integer> orderedTraversal(){}
 }
