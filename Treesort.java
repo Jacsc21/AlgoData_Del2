@@ -16,7 +16,7 @@ public class Treesort {
         int i = 0;
 
 
-        while (i <= n){
+        while (i < n){
             System.out.println((liste.get(i).intValue()));
             //System.out.println(DB.getKey());
             i++;
