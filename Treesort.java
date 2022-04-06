@@ -13,13 +13,13 @@ public class Treesort {
     
         System.out.println();
         ArrayList<Integer> liste = DB.orderedTraversal();
+        int i = 0;
 
 
-        while (n > 0){
-            System.out.println((liste.get(0).intValue()));
-            liste.remove(0);
+        while (i <= n){
+            System.out.println((liste.get(i).intValue()));
             //System.out.println(DB.getKey());
-            n--;
+            i++;
         }
        }
     
