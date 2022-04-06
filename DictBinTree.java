@@ -56,9 +56,9 @@ public class DictBinTree implements Dict{
 
     private ArrayList<Integer> inorderTreeWalk(BinNode x, ArrayList<Integer> liste){
         if(x != null){
-            x = x.getLeftChild();
+            inorderTreeWalk(x.getLeftChild(), liste);
             liste.add(Integer.valueOf(x.getData()));
-            x = x.getRightChild();
+            inorderTreeWalk(x.getRightChild(), liste);
         }
         return liste;
     }
