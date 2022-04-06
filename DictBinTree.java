@@ -1,3 +1,8 @@
+/*
+    Jacsc21@student.sdu.dk  Jacob Schmidt
+    Julso21@student.sdu.dk  Julian Sørensen
+    Jaali21@student.sdu.dk  Jan Alian
+*/
 import java.util.*;
 
 public class DictBinTree implements Dict{
