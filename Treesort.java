@@ -23,7 +23,6 @@ public class Treesort {
 
         while (i < n){
             System.out.println((liste.get(i).intValue()));
-            //System.out.println(DB.getKey());
             i++;
         }
        }
